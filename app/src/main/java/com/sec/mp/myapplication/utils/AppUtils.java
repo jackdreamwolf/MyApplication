@@ -27,13 +27,6 @@ import java.io.File;
 public class AppUtils {
 	private Context context;
 
-
-
-
-
-
-
-
 	public AppUtils(Context context) {
 		this.context = context;
 	}
