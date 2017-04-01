@@ -26,7 +26,7 @@ import java.io.File;
  */
 public class AppUtils {
 	private Context context;
-
+//122222222222222222222222
 	public AppUtils(Context context) {
 		this.context = context;
 	}
