@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:background="#0055cc"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/iBcancel"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@null"
+            app:srcCompat="@android:drawable/ic_menu_revert" />
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="#cccccc" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="热歌榜"
+            android:textColor="#ff0000"
+            android:textSize="20sp" />
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="#cccccc" />
+
+        <ImageButton
+            android:id="@+id/iBsearch"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@null"
+            app:srcCompat="@android:drawable/ic_menu_search" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@+id/rl_title"
+        android:background="#cccccc">
+
+        <RadioGroup
+            android:id="@+id/radiogroup"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:background="@color/colorPrimary"
+            android:orientation="horizontal"
+            android:paddingBottom="2dp"
+            android:paddingTop="2dp">
+
+            <RadioButton
+                android:checked="true"
+                android:id="@+id/rb_hot"
+                android:layout_width="20dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="热歌"
+                android:textColor="@drawable/text_selector"
+                android:textSize="15sp" />
+
+            <RadioButton
+                android:id="@+id/rb_sole"
+                android:layout_width="20dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="销量"
+                android:textColor="@drawable/text_selector"
+                android:textSize="15sp" />
+
+            <RadioButton
+                android:id="@+id/rb_land"
+                android:layout_width="20dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="内地"
+                android:textColor="@drawable/text_selector"
+                android:textSize="15sp" />
+
+            <RadioButton
+                android:id="@+id/rb_oumei"
+                android:layout_width="20dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="欧美"
+                android:textColor="@drawable/text_selector"
+                android:textSize="15sp" />
+
+            <RadioButton
+                android:id="@+id/rb_gangtai"
+                android:layout_width="20dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="港台"
+                android:textColor="@drawable/text_selector"
+                android:textSize="15sp" />
+
+            <RadioButton
+                android:id="@+id/rb_hanguo"
+                android:layout_width="20dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="韩国"
+                android:textColor="@drawable/text_selector"
+                android:textSize="15sp" />
+
+            <RadioButton
+                android:id="@+id/rb_janpen"
+                android:layout_width="20dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="日本"
+                android:textColor="@drawable/text_selector"
+                android:textSize="15sp" />
+
+            <RadioButton
+                android:id="@+id/rb_minyao"
+                android:layout_width="20dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="民谣"
+                android:textColor="@drawable/text_selector"
+                android:textSize="15sp" />
+
+            <RadioButton
+                android:id="@+id/rb_ruck"
+                android:layout_width="20dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="摇滚"
+                android:textColor="@drawable/text_selector"
+                android:textSize="15sp" />
+        </RadioGroup>
+
+    </ScrollView>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/scrollView"
+        android:layout_above="@+id/rl_bottom" />
+
+    <RelativeLayout
+        android:id="@+id/rl_bottom"
+        android:background="#B08035"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+        <TextView
+            android:id="@+id/tv_curruntimetime_rl"
+            android:layout_width="wrap_content"
+            android:layout_height="13dp"
+            android:text="00:00"
+            android:textSize="12sp"
+            />
+        <SeekBar
+            android:id="@+id/seekBar1"
+            style="@style/Widget.SeekBar.Normal"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_toRightOf="@+id/tv_curruntimetime_rl"
+            android:layout_marginBottom="-6dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="6dp"
+            android:layout_toLeftOf="@+id/tv_totletime_rl"
+            android:layout_toStartOf="@+id/tv_totletime_rl" />
+        <TextView
+            android:layout_alignParentRight="true"
+            android:id="@+id/tv_totletime_rl"
+            android:layout_width="wrap_content"
+            android:layout_height="13dp"
+            android:text="00:00"
+            android:textSize="12sp"/>
+
+        <ImageView
+            android:layout_below="@+id/tv_curruntimetime_rl"
+            android:id="@+id/imageViewplayer"
+            android:layout_width="39dp"
+            android:layout_height="39dp"
+            android:scaleType="fitXY"
+            android:layout_alignParentLeft="true"
+            app:srcCompat="@drawable/blue_button_background" />
+
+        <ImageButton
+
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/tv_curruntimetime_rl"
+            android:id="@+id/ib_playorpause"
+            android:background="@null"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/playselector"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/imageViewplayer"
+            android:layout_toEndOf="@+id/imageViewplayer"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp" />
+        <TextView
+            android:id="@+id/tvsongname_paomadeng"
+            android:layout_height="21dp"
+            android:layout_width="wrap_content"
+            android:text="df;lamfkd;laf;lamfc;la"
+            android:gravity="center"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_above="@+id/textView"
+            android:layout_toRightOf="@+id/ib_playorpause"
+            android:layout_toEndOf="@+id/ib_playorpause" />
+        <TextView
+            android:gravity="center"
+            android:text="dsafasfa fa"
+            android:layout_width="wrap_content"
+            android:layout_height="18dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignLeft="@+id/tvsongname_paomadeng"
+            android:layout_alignStart="@+id/tvsongname_paomadeng"
+            android:id="@+id/textView" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
